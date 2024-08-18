@@ -1,0 +1,32 @@
+syntax = "proto3";
+package helloworld;
+
+service Greeter {
+    // Our SayHello rpc accepts HelloRequests and returns HelloReplies
+    rpc SayHello (HelloRequest) returns (HelloReply);
+    
+    rpc Goodbye (GoodbyeRequest) returns (GoodbyeReply);    
+}
+
+// Hello
+message HelloRequest {
+    // Request message contains the name to be greeted
+    string name = 1;
+}
+
+message HelloReply {
+    // Reply contains the greeting message
+    string message = 1;
+}
+
+// Goodbye
+
+message GoodbyeRequest {
+    // Request message contains the name to say Goodbye to
+    string name = 1;
+}
+
+message GoodbyeReply {
+    // Reply contains the Goodbye
+    string message = 1;
+}
