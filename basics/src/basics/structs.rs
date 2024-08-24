@@ -17,7 +17,10 @@ impl Account {
     fn show(&self){
         println!("{:#?}", &self);
     }
-    
+
+    fn summary(&self) -> String {
+        format!("{} has a balance {}", self.holder, self.balance)
+    }
 
     fn deposit(&mut self, amount:i32)->i32{
         self.balance +=amount;
@@ -46,6 +49,17 @@ impl Bank {
     fn add_account(&mut self, account:Account){
         self.accounts.push(account);
     }
+
+    fn total_balace(&self) -> i32 {
+        self.accounts.iter().map(|account|account.balance).sum()
+    }
+
+    fn summary(&self)->Vec<String>{
+        self.accounts
+        .iter()
+        .map(|account|account.summary())
+        .collect::<Vec<String>>()
+    }
 }
 
 fn print_account(account:Account){
@@ -56,11 +70,13 @@ fn print_account(account:Account){
 pub fn structs_example() {
     println!("Exampels on working with structs");
     let mut bank = Bank::new();    
-    let account = Account::new(1, "Said".to_string());
+    let mut account = Account::new(1, "Said".to_string());
     bank.show();
     bank.show();
     account.show();
+    account.deposit(1000);
     bank.add_account(account);
     bank.show();
+    println!("{}", bank.total_balace());
     
 }

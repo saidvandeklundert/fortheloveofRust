@@ -3,6 +3,7 @@ mod basics;
 use basics::enums::enum_examples;
 use basics::structs::structs_example;
 use basics::lifetimes::lifetimes_examples;
+use basics::generics::generics_example;
 #[derive(Debug)]
 struct Deck {
     cards: Vec<String>,
@@ -54,7 +55,9 @@ fn main() {
     d.shuffle();
     println!("{:#?}", d);
     enum_examples();
-    lifetimes_examples();
+
     structs_example();
+    lifetimes_examples();    
+    generics_example();
     
 }
