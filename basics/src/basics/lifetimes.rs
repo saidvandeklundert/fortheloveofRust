@@ -4,6 +4,10 @@
 /// - Values cannot be dropped if there are still active references to it
 /// - References to a value cannot outlive the value they refer to
 /// 
+/// 
+/// Omitting lifetime annotations is oftentimes referred to as elision.
+/// Eliding the lifetime annotations -> removing the lifetime annotation
+/// 
 
 /// This function fails with the following message:
 /// 9 | fn next_langauage(languages:&[String],current:&str)->&str{
