@@ -4,6 +4,8 @@ use basics::enums::enum_examples;
 use basics::structs::structs_example;
 use basics::lifetimes::lifetimes_examples;
 use basics::generics::generics_example;
+use basics::traits::traits_example;
+use basics::smart_pointers::smart_pointers_example;
 #[derive(Debug)]
 struct Deck {
     cards: Vec<String>,
@@ -59,5 +61,7 @@ fn main() {
     structs_example();
     lifetimes_examples();    
     generics_example();
+    traits_example();
+    smart_pointers_example();
     
 }

@@ -6,6 +6,9 @@
 ///
 ///
 ///
+
+#[allow(dead_code)]
+
 #[derive(Debug)]
 enum Media {
     // variants:

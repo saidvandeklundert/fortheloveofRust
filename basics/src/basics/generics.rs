@@ -1,4 +1,7 @@
 use num_traits::{ToPrimitive, Float};
+
+#[allow(dead_code)]
+
 pub fn generics_example(){
     println!("some generic examples");
     println!("{}", solve(3.0, 4.0));

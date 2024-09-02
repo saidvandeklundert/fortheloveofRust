@@ -7,6 +7,20 @@ use crossterm::{
     ExecutableCommand,
 };
 
+#[derive(Debug)]
+struct EthernetPort {
+    speed: String,
+    index: String,
+    mtu: String,
+    alias: String,
+    //preemphasis: Option<String>,
+    admin_status: String,
+    oper_status: String,
+    lanes: String,
+    autoneg: String,
+    description: String,
+}
+
 fn main() -> crossterm::Result<()> {
     // Enable raw mode to read individual key presses
     terminal::enable_raw_mode()?;

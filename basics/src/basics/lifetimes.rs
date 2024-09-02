@@ -45,6 +45,9 @@
 /// 
 /// So we add the lifetime annotation, 'a', to both the 'languages' argument as well as the return value.
 /// Now the compiler understands everything and we can compile the program.
+
+#[allow(dead_code)]
+
 fn next_language<'a>(languages:&'a [String],current:&str)->&'a str{
     let mut found = false;
     for language in languages.iter(){
