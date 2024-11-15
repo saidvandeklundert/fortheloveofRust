@@ -31,4 +31,18 @@ Need to change the value? -> favor receiving a mutable ref
 
 
 
+Cargo commands:
+```
+# run program
+cargo run
+
+# quietly run the program:
+cargo run --quiet
+cargo run -q
+
+# extra info:
+cargo run -vvvv
+# see all the STD docs:
+rustup doc --std
+```
 Blog on ownership: https://without.boats/blog/references-are-like-jumps/
